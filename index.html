@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="countdownTimer">
+    <meta name="author" content="Ratinan Lee">
+    <title>countdownTimer</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h1>countdownTimer</h1>
+          <h2>Included JS</h2>
+          <pre>
+&lt;script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"&gt;&lt;/script&gt;
+&lt;script src="src/countdownTimer.min.js"&gt;&lt;/script&gt;
+          </pre>
+
+          <h2>Test 1, loop</h2>
+          <p class="fw-bold">Result:</p>
+          <p>Restart in <span id="test1"></span>.</p>
+          <p id="echo1"></p>
+          <p class="fw-bold">Code:</p>
+          <pre>
+&lt;p&gt;Restart in &lt;span id="test1"&gt;&lt;/span&gt;.&lt;/p&gt;
+&lt;p id="echo1"&gt;&lt;/p&gt;
+&lt;script&gt;
+let echo = function () {
+  $('#echo1').append('Hits 0, restarting... ');
+}
+$('#test1').countdownTimer({
+  seconds: 5,
+  loop: true,
+  callback: echo
+});
+&lt;/script&gt;
+</pre>
+
+          <h2>Test 2, no loop</h2>
+          <p class="fw-bold">Result:</p>
+          <p>Countdown <span id="test2"></span> seconds.</p>
+          <p class="fw-bold">Code:</p>
+          <pre>
+&lt;p&gt;Countdown &lt;span id="test2"&gt;&lt;/span&gt; seconds.&lt;/p&gt;
+&lt;script&gt;
+$('#test2').countdownTimer({
+  seconds: 5,
+  loop: false
+});
+&lt;/script&gt;
+          </pre>
+
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="src/countdownTimer.min.js"></script>
+  <script>
+    $(function () {
+      // TEST
+      let echo = function () {
+        $('#echo1').append('Hits 0, restarting... ');
+      }
+      $('#test1').countdownTimer({
+        seconds: 5,
+        loop: true,
+        callback: echo
+      });
+      $('#test2').countdownTimer({
+        seconds: 5,
+        loop: false
+      });
+    });
+  </script>
+</html>
