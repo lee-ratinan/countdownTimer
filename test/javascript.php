@@ -3,7 +3,7 @@
   <h2>Included JS</h2>
   <code><pre>
 &lt;script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"&gt;&lt;/script&gt;
-&lt;script src="src/countdownTimer.min.js"&gt;&lt;/script&gt;
+&lt;script src="../src/countdownTimer.min.js"&gt;&lt;/script&gt;
 </pre></code>
 
     <?php
