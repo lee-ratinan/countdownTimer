@@ -22,7 +22,7 @@ $('#selector').countdownTimer({options});
     </ul>
   </li>
   <li>
-    Set the callback function, the default is `null`.
+    Set the callback function, the default is <code>null</code>.
     <ul>
       <li>If the callback function is not null, it is called when the timer hits 0.</li>
     </ul>
